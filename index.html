@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="left">
+                <h1 class="header-h1 title">
+                    Books for you
+                </h1>
+                <h2 class="header-h2">
+                    Discover or share new books.
+                </h2>
+            </div>
+                <div class="right">
+                    <button class="newBook-btn">
+                        + New book
+                    </button>
+                </div>
+        </header>
+
+    </div>
+
+    <div class="books">
+        <div class="top-section">
+            <ul class="book-description">
+                <li id="title">Title</li>
+                <li id="author">Author</li>
+                <li id="pages">Pages</li>
+                <li id="read">Did you read it?</li>
+            </ul>
+        </div>
+
+
+        <div id="list-books-container"></div>
+        <div class="list-books">
+            <div class="title">
+                <p class="p-title">Lagrimas en la lluvia</p>
+            </div>
+            <div class="author">
+                <p class="p-author">
+                    Rosa Montero
+                </p>
+            </div>
+            <div class="pages">
+                <p class="p-pages">
+                    296
+                </p>
+            </div>
+            <div class="btn-read">
+                <button class="button-read">
+                    <span class="shadow"></span>
+                    <span class="read"></span>
+                    <span class="front text"> 
+                        
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div id="books-container"></div>
+
+
+
+
+
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

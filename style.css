@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+}
+
+  
+
+
+:root {
+    --global-font-family: 'Signika Negative', sans-serif;
+    --second-font-family: 'Raleway', sans-serif;
+}
+
+header {
+    box-shadow: 3px 17px 19px -7px rgba(43,29,1,0.56);
+-webkit-box-shadow: 3px 17px 19px -7px rgba(43,29,1,0.56);
+-moz-box-shadow: 3px 17px 19px -7px rgba(43,29,1,0.56);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(79, 54, 8);
+    color: white;
+    height: 230px;
+    position: relative;
+    bottom: 21px;
+}
+
+.header-h1, .header-h2 {
+    position: relative;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-family: var(--second-font-family);
+    font-size: 18px;
+    color: white;
+    
+}
+
+.header-h1 {
+    color: orange;
+ font-family: var(--global-font-family);
+ font-size: 40px;
+}
+
+.left {
+    width: 500px;
+    margin: 30px 0 0 110px;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: 10rem;
+    bottom: 10px;
+}
+
+.newBook-btn {
+    width: 150px;
+    height: 70px;
+    border: 0px solid;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    font-family: var(--global-font-family);
+    
+}
+
+.newBook-btn:hover {
+    transform: translateY(-0.25em);
+}
+
+
+/* Books section */
+
+
+/* Container for book created by the user's inputs */
+
+
+
+
+.books {
+    overflow-y: scroll;
+    margin-left: 40px;
+    height: 20rem;
+    width: 80rem;
+    background-color: #ccc;
+    
+}
+
+.top-section, .book-description {
+    display: flex;
+    background-color: orange;
+}
+
+.book-description {
+    font-size: 20px;
+    font-family: var(--second-font-family);
+    width: 80rem;
+    justify-content:space-evenly;
+    list-style: none;
+}
+
+#title, #read {
+    position: relative;
+    right: 6rem;
+}
+
+#author {
+    position: relative;
+    right: 2.5rem;
+}
+
+#pages {
+    position: relative;
+    right: 1rem;
+}
+
+.list-books {
+    display: flex;
+    width: 40rem;
+    height: 100px;
+    font-family: var(--global-font-family);
+    font-size: 20px;
+    font-style: italic;
+    max-height: 400px; 
+}
+
+.title, .author {
+    display: flex;
+    width: 300px;
+    text-align: center;
+}
+
+.p-title, .p-author {
+    width: 300px;
+}
+
+.pages, .p-pages {
+    width: 100px;
+    position: relative;
+    left: 45px;
+}
+
+.btn-read {
+    position: relative;
+    left: 11rem;
+    top: 15px;
+}
+
+.read, .not-read, .new-read, .new-not-read {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0px solid;
+}
+
+.read, .new-read {
+    color: rgb(255, 255, 255);
+    background-color: rgb(9, 224, 9);
+}
+
+.not-read, .new-not-read {
+    background-color: red;
+}
+
+
+.button-read {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+   }
+   
+   .shadow, .new-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .read, .new-read{
+    content: "Xs";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       rgb(84, 218, 6) 0%,
+       rgb(0, 163, 0) 8%,
+       rgb(52, 163, 0) 92%,
+       rgb(8, 233, 27) 100%
+     );
+   }
+
+   .not-read, .new-not-read {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       hsl(340deg 100% 16%) 0%,
+       hsl(340deg 100% 32%) 8%,
+       hsl(340deg 100% 32%) 92%,
+       hsl(340deg 100% 16%) 100%
+     );
+   }
+
+   .front-not-read, .new-notRead-front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: rgb(255, 0, 0);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+
+   .front-not-read::after, .new-notRead-front::after {
+    content: "X";
+   }
+   .front:before, .new-front::before{
+    content: "✓";
+    font-size: 20px;
+   }
+
+   .front, .new-front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: rgb(0, 255, 0);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .button-read:hover {
+    filter: brightness(110%);
+   }
+   
+   .button-read:hover, .front, .new-front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .button-read:active, .front, .new-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   .button-read:hover, .shadow, .new-shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .button-read:active, .shadow, .new-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   .button-read:focus:not(:focus-visible) {
+    outline: none;
+   }
+
+
+
+   .button-read {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+   }
+   
+
+
+
+  
+  
+    
