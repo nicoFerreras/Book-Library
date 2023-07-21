@@ -56,29 +56,73 @@ header {
     bottom: 10px;
 }
 
-.newBook-btn {
-    width: 150px;
-    height: 70px;
-    border: 0px solid;
-    background-color: orange;
-    color: white;
+/* Form */
+.hidden {
+    display: none;
+  }
+
+  #addBookForm, form {
+    box-shadow: 7px 10px 0px -1px rgba(255,138,0,1);
+-webkit-box-shadow: 7px 10px 0px -1px rgba(255,138,0,1);
+-moz-box-shadow: 7px 10px 0px -1px rgba(255,138,0,1);
+border-radius: 30px;
+border: 1px solid orange;
+  }
+
+  #addBookForm {
+    position: absolute;
+  top: 20%;
+  left: 35%;
+  width: 400px; 
+  height: 400px; 
+  background-color: #f0f0f0; 
+  z-index: 9999;
+
+  }
+
+.blur-in-expand{
+
+    animation:blur-in-expand 0.8s linear both} @keyframes blur-in-expand{0%{transform:scale(0);filter:blur(12px);opacity:0}100%{transform:scale(1);filter:blur(0);opacity:1}}
+
+  form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+    width: 400px;
+  }
+
+  label {
+    margin: 15px 0 10px 20px;
     font-size: 20px;
     font-family: var(--global-font-family);
-    
-}
+  }
 
-.newBook-btn:hover {
-    transform: translateY(-0.25em);
-}
+  input {
+    font-family: var(--second-font-family);
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    height: 30px;
+    width: 350px;
+    left: 20px;
+    border-radius: 10px;
+    border: 2px solid orange;
+    margin: 10px 0 10px 0;
+    box-shadow: 7px 8px 0px -1px rgba(255,138,0,1);
+-webkit-box-shadow: 7px 8px 0px -1px rgba(255,138,0,1);
+-moz-box-shadow: 7px 8px 0px -1px rgba(255,138,0,1);
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  /* ------- */
 
 
-/* Books section */
-
-
-/* Container for book created by the user's inputs */
-
-
-
+  /* Books */
 
 .books {
     overflow-y: scroll;
@@ -97,7 +141,7 @@ header {
 .book-description {
     font-size: 20px;
     font-family: var(--second-font-family);
-    width: 80rem;
+    width: 74rem;
     justify-content:space-evenly;
     list-style: none;
 }
@@ -114,7 +158,7 @@ header {
 
 #pages {
     position: relative;
-    right: 1rem;
+    right: 3.5rem;
 }
 
 .list-books {
@@ -143,7 +187,75 @@ header {
     left: 45px;
 }
 
-.btn-read {
+
+
+/*  All buttons */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* New book */
+
+.newBook-btn {
+    width: 150px;
+    height: 70px;
+    border: 0px solid;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    font-family: var(--global-font-family);
+    
+}
+
+.newBook-btn:hover {
+    transform: translateY(-0.25em);
+}
+
+/* ---- */
+
+/* Form buttons */
+
+#submit-btn, #cancelBtn {
+    width: 100px;
+    height: 40px;
+    border: 1px solid orange;
+    border-radius: 30px;
+    box-shadow: 7px 8px 0px -1px rgba(255,138,0,1);
+-webkit-box-shadow: 7px 8px 0px -1px rgba(255,138,0,1);
+-moz-box-shadow: 7px 8px 0px -1px rgba(255,138,0,1);
+font-family: var(--global-font-family);
+  }
+
+  #submit-btn {
+    position: relative;
+    top: 20px;
+    left: 50px;
+  }
+
+  #cancelBtn {
+    
+    position: relative;
+    left: 230px;
+    bottom: 20px;
+  }
+
+  /* ---- */
+
+  /* Read button */
+
+  .btn-read {
     position: relative;
     left: 11rem;
     top: 15px;
@@ -194,7 +306,7 @@ header {
    }
    
    .read, .new-read{
-    content: "Xs";
+    content: "X";
     position: absolute;
     top: 0;
     left: 0;
@@ -239,6 +351,8 @@ header {
     transition: transform
        600ms
        cubic-bezier(.3, .7, .4, 1);
+       position: relative;
+       top: 5px;
    }
 
    .front-not-read::after, .new-notRead-front::after {
@@ -246,7 +360,7 @@ header {
    }
    .front:before, .new-front::before{
     content: "✓";
-    font-size: 20px;
+    font-size: 15px;
    }
 
    .front, .new-front {
@@ -309,7 +423,32 @@ header {
     user-select: none;
     touch-action: manipulation;
    }
-   
+
+   /* ----- */
+
+
+   /* Delete button */
+
+   .delete-button {
+    background-color: red;
+    height: 50px;
+    border: 0px solid;
+    border-radius: 10px;
+    position: relative;
+    left: 20rem;
+    top: 13px;
+}
+
+
+
+.delete-button:active{
+    animation:scale-down-center 0.1s; } @keyframes scale-down-center{0%{transform:scale(1)}100%{transform:scale(.5)}
+}
+
+/* ------- */
+
+
+
 
 
 

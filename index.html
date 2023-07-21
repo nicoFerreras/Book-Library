@@ -12,6 +12,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="addBookForm"  class="hidden blur-in-expand">
+        <form id="bookForm">
+          <label for="title">Title:</label>
+          <input type="text" id="title" required>
+          <label for="author">Author:</label>
+          <input type="text" id="author" required>
+          <label for="pages">Number of Pages:</label>
+          <input type="number" id="pages" required>
+          <button id="submit-btn" type="submit">Add Book</button>
+          <button type="button" id="cancelBtn">Cancel</button>
+        </form>
+      </div>
+
+
     <div class="main">
         <header>
             <div class="left">
@@ -37,43 +51,12 @@
                 <li id="title">Title</li>
                 <li id="author">Author</li>
                 <li id="pages">Pages</li>
-                <li id="read">Did you read it?</li>
+                <li id="read">Read</li>
             </ul>
         </div>
 
 
-        <div id="list-books-container"></div>
-        <div class="list-books">
-            <div class="title">
-                <p class="p-title">Lagrimas en la lluvia</p>
-            </div>
-            <div class="author">
-                <p class="p-author">
-                    Rosa Montero
-                </p>
-            </div>
-            <div class="pages">
-                <p class="p-pages">
-                    296
-                </p>
-            </div>
-            <div class="btn-read">
-                <button class="button-read">
-                    <span class="shadow"></span>
-                    <span class="read"></span>
-                    <span class="front text"> 
-                        
-                    </span>
-                </button>
-            </div>
-        </div>
-
         <div id="books-container"></div>
-
-
-
-
-
     </div>
     <script src="script.js" defer></script>
 </body>
